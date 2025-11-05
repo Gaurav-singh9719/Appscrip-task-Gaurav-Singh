@@ -13,7 +13,7 @@ const Navbar = () => {
           <a href="/" className="nav-brand">
             <img
               src="https://cdn-icons-png.flaticon.com/512/906/906343.png"
-              alt="AppDost Logo"
+              alt="Appscrip Logo"
               className="nav-logo-img"
             />
             <span className="nav-brand-text">APPSCRIP</span>
@@ -22,11 +22,16 @@ const Navbar = () => {
 
         {/* CENTER: Links (desktop) */}
         <nav className={`nav-center ${menuOpen ? "open" : ""}`}>
-          <a href="#" className="nav-link">Shop</a>
-          <a href="#" className="nav-link">Skills</a>
-          <a href="#" className="nav-link">Stories</a>
-          <a href="#" className="nav-link">About</a>
-          <a href="#" className="nav-link">Contact</a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a href="/shop" className="nav-link">Shop</a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a href="/skills" className="nav-link">Skills</a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a href="/stories" className="nav-link">Stories</a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a href="/about" className="nav-link">About</a>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a href="/contact" className="nav-link">Contact</a>
         </nav>
 
         {/* RIGHT: Icons */}
@@ -47,13 +52,13 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu (slides down) */}
+      {/* Mobile menu */}
       <div className={`mobile-menu ${menuOpen ? "visible" : ""}`}>
-        <a href="#" className="mobile-link" onClick={() => setMenuOpen(false)}>Shop</a>
-        <a href="#" className="mobile-link" onClick={() => setMenuOpen(false)}>Skills</a>
-        <a href="#" className="mobile-link" onClick={() => setMenuOpen(false)}>Stories</a>
-        <a href="#" className="mobile-link" onClick={() => setMenuOpen(false)}>About</a>
-        <a href="#" className="mobile-link" onClick={() => setMenuOpen(false)}>Contact</a>
+        <a href="/shop" className="mobile-link" onClick={() => setMenuOpen(false)}>Shop</a>
+        <a href="/skills" className="mobile-link" onClick={() => setMenuOpen(false)}>Skills</a>
+        <a href="/stories" className="mobile-link" onClick={() => setMenuOpen(false)}>Stories</a>
+        <a href="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>About</a>
+        <a href="/contact" className="mobile-link" onClick={() => setMenuOpen(false)}>Contact</a>
       </div>
     </header>
   );

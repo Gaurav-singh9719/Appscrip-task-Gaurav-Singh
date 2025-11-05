@@ -1,12 +1,22 @@
 import React from "react";
-import ProductListing from "./pages/ProductListing";
+import "./styles/global.css";
+import "./styles/navbar.css";
+import "./styles/filters.css";
+import "./styles/products.css";
+import "./styles/footer.css";
 
-function App() {
+import Navbar from "./components/Navbar";
+import ProductListing from "./pages/ProductListing";
+import Footer from "./components/Footer";
+
+const App = () => {
   return (
-    <div>
+    <>
+      <Navbar />
       <ProductListing />
-    </div>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
