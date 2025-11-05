@@ -1,0 +1,96 @@
+.filter-sidebar {
+  width: 250px;
+  background: #fff;
+  border-right: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.filter-header-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.filter-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.6rem;
+}
+
+.filter-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.filter-icon {
+  font-size: 1rem;
+  color: #666;
+}
+
+.filter-options {
+  margin-top: 0.6rem;
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  animation: slideDown 0.25s ease;
+}
+
+.filter-options label {
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.filter-options input[type="checkbox"] {
+  margin-right: 0.4rem;
+  accent-color: #000;
+}
+
+.no-options {
+  font-size: 0.85rem;
+  color: #888;
+  margin-left: 0.5rem;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .filter-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 0.8rem 1rem;
+  }
+
+  .filter-item {
+    border-bottom: 1px solid #f0f0f0;
+  }
+}

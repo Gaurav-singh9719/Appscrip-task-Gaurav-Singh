@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+.plp-header {
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+.plp-header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+}
+
+.plp-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Toolbar */
+.plp-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 0.8rem 2rem;
+  flex-wrap: wrap;
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toggle-filter {
+  background: none;
+  border: none;
+  color: #555;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+.toggle-filter:hover {
+  color: #000;
+}
+
+.item-count {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Layout */
+.plp-main {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.plp-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.plp-products {
+  flex: 1;
+}
+
+
+@media (max-width: 900px) {
+  .plp-main {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .plp-sidebar {
+    display: none;
+  }
+
+  .toggle-filter {
+    font-weight: 500;
+  }
+}
