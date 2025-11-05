@@ -5,16 +5,13 @@ import "../styles/filters.css";
 import "../styles/products.css";
 import "../styles/footer.css";
 
-import Navbar from "../components/Navbar";
 import FilterSidebar from "../components/FilterSidebar";
 import SortDropdown from "../components/SortDropdown";
 import ProductCard from "../components/ProductCard";
-import Footer from "../components/Footer";
 
 const ProductListing = () => {
   const [showFilters, setShowFilters] = useState(true);
 
-  // Dummy product data (you can replace with API later)
   const products = Array.from({ length: 12 }, (_, i) => ({
     id: i + 1,
     image: `https://picsum.photos/500/50${i}`,
@@ -25,8 +22,6 @@ const ProductListing = () => {
 
   return (
     <>
-      <Navbar />
-
       {/* HEADER SECTION */}
       <section className="plp-header">
         <h1>DISCOVER OUR PRODUCTS</h1>
@@ -54,15 +49,15 @@ const ProductListing = () => {
 
       {/* MAIN LAYOUT */}
       <div className="plp-container">
-        {/* FILTER SIDEBAR */}
         {showFilters && (
           <aside className="plp-sidebar">
             <FilterSidebar />
           </aside>
         )}
 
-        {/* PRODUCTS SECTION */}
-        <div className={`plp-products ${showFilters ? "with-filter" : "full-width"}`}>
+        <div
+          className={`plp-products ${showFilters ? "with-filter" : "full-width"}`}
+        >
           <div className="product-grid">
             {products.map((product) => (
               <ProductCard
@@ -76,8 +71,6 @@ const ProductListing = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };
